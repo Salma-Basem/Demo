@@ -1,0 +1,93 @@
+/* General Styles */
+.circle-image-container {
+  width: 150px; /* Diameter of the circle */
+  height: 150px; /* Diameter of the circle */
+  overflow: hidden; /* Hide any overflow */
+  border-radius: 50%; /* Circular shape */
+  display: flex;
+  align-items: center; /* Center image vertically */
+  justify-content: center; /* Center image horizontally */
+}
+
+.circle-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Cover the entire circle */
+  object-position: center top; /* Adjust this to focus on a different part of the image */
+}
+
+.text-center {
+  text-align: center; /* Center align text */
+}
+
+/* List styling */
+.custom-list {
+  list-style: none; /* Remove default bullets */
+  padding-left: 0; /* Remove default padding */
+  overflow: hidden; /* Hide any overflowed content */
+  height: 0; /* Initially hide the list */
+  transition: height 0.5s ease-in-out; /* Smooth transition for height */
+}
+
+.custom-list.show {
+  height: fit-content; /* Show the list when toggled */
+}
+
+.custom-list li {
+  position: relative;
+  padding-left: 1.5rem; /* Adjust based on the bullet size */
+  margin-bottom: 0.5rem; /* Reduce bottom margin for better spacing */
+  opacity: 1; /* Ensure items are visible when shown */
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out; /* Smooth transition for opacity and transform */
+  transform: translateY(0); /* Initial transform */
+}
+
+.custom-list li::before {
+  content: '-'; /* Dash before each item */
+  position: absolute;
+  color: var(--text-color); /* Dash color */
+  font-size: 1rem; /* Dash size */
+  left: 0; /* Position on the left for LTR */
+}
+
+/* RTL adjustments for the dash */
+[dir="rtl"] .custom-list li {
+  padding-left: 0; /* Remove extra padding in RTL */
+  padding-right: 1.5rem; /* Add padding for dash in RTL */
+}
+
+[dir="rtl"] .custom-list li::before {
+  left: auto; /* Override left positioning in RTL */
+  right: 0; /* Position dash on the right for RTL */
+}
+
+[dir="rtl"] .custom-list {
+  direction: rtl; /* Ensure RTL support */
+}
+
+/* Animation for list items */
+.custom-list li.animate-fade-in {
+  opacity: 0; /* Initially hidden */
+  transform: translateY(-10px); /* Slide up effect */
+}
+
+.custom-list.show .animate-fade-in {
+  opacity: 1; /* Fade in */
+  transform: translateY(0); /* Slide down effect */
+}
+
+/* Button Icon Transition */
+.toggle-button {
+  display: inline-flex;
+  align-items: center;
+  transition: color 0.3s ease, transform 0.3s ease; /* Smooth color and transform transitions */
+}
+
+.toggle-button i {
+  transition: transform 0.3s ease; /* Smooth rotation for the icon */
+}
+
+.toggle-button.expanded i {
+  transform: rotate(180deg); /* Rotate the icon 180 degrees when expanded */
+}
+

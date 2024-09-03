@@ -1,0 +1,10 @@
+.nav-link:hover {
+    color: var(--main-color) !important; /* Hover color */
+  }
+  .rtl {
+    direction: rtl;
+    text-align: right;
+  }
+ 
+
+  

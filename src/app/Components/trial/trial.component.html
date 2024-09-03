@@ -1,0 +1,84 @@
+<!-- Navbar for Large Screens -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top d-flex justify-content-between " [dir]="language === 'ar' ? 'rtl' : 'ltr'" id="largeNavbar">
+
+    <div class="container">
+    
+    <!-- Logo and Toggler -->
+    
+    <a class="navbar-brand ms-5" routerLink="/">
+    
+    <img src="./assets/Images/GhayaLogoNav.png" alt="Logo">
+    
+    </a>
+    
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    <!-- Navigation Links and Actions -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav flex-column flex-lg-row"
+          [ngClass]="{
+            'me-lg-auto': language === 'en',
+            'ms-lg-auto': language === 'ar'
+          }">
+        <!-- Home Item -->
+        <li class="nav-item">
+          <a class="nav-link text-white" aria-current="page" routerLink="Home" routerLinkActive="bg rounded-3">{{ 'NAVBAR.HOME' | translate }}</a>
+        </li>
+    
+        <!-- Awards Dropdown -->
+        <li class="nav-item dropdown "[ngClass]="{
+          'h6': language === 'en',
+          'h4': language === 'ar'
+        }">
+          <a class="nav-link dropdown-toggle text-white " role="button" routerLink="Awards" routerLinkActive="bg rounded-3" data-bs-toggle="dropdown" aria-expanded="false">
+            {{ 'NAVBAR.AWARDS.AWARDS' | translate }}
+          </a>
+          <ul class="dropdown-menu bg-black"
+              [ngClass]="{'text-end': language === 'ar', 'text-start': language !== 'ar'}">
+            <li><a class="dropdown-item bg-main nav-link " routerLink="AboutUs/AboutGhaya" [fragment]="'about-ghaya'">{{ 'NAVBAR.AWARDS.SHORT_STORY' | translate }}</a></li>
+            <li><a class="dropdown-item bg-main nav-link " routerLink="/AboutUs/OurGoals" [fragment]="'our-goals'">{{ 'NAVBAR.AWARDS.PHOTOGRAPHY' | translate }}</a></li>
+            <li><a class="dropdown-item bg-main nav-link " routerLink="/AboutUs/AboutGhaya" [fragment]="'about-ghaya'">{{ 'NAVBAR.AWARDS.CONTENT_CREATION' | translate }}</a></li>
+          </ul>
+        </li>
+    
+        <!-- About Us Dropdown -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-white" role="button" routerLinkActive="bg rounded-3" data-bs-toggle="dropdown" aria-expanded="false">
+            {{ 'NAVBAR.ABOUT_US' | translate }}
+          </a>
+          <ul class="dropdown-menu bg-black"
+              [ngClass]="{'text-end': language === 'ar', 'text-start': language !== 'ar'}">
+            <li><a class="dropdown-item bg-main nav-link" routerLink="/AboutUs/AboutGhaya" [fragment]="'about-ghaya'">{{ 'NAVBAR.ABOUT_US_ITEMS.WHO_WE_ARE' | translate }}</a></li>
+            <li><a class="dropdown-item bg-main nav-link" routerLink="/AboutUs/OurGoals" [fragment]="'our-goals'">{{ 'NAVBAR.ABOUT_US_ITEMS.BOARD_MEMBERS' | translate }}</a></li>
+            <li><a class="dropdown-item bg-main nav-link" routerLink="/AboutUs/AboutGhaya" [fragment]="'about-ghaya'">{{ 'NAVBAR.ABOUT_US_ITEMS.TEAM' | translate }}</a></li>
+            <li><a class="dropdown-item bg-main nav-link" routerLink="/AboutUs/OurGoals" [fragment]="'our-goals'">{{ 'NAVBAR.POLICY_AND_OUR_GOALS' | translate }}</a></li>
+            <li><a class="dropdown-item bg-main nav-link" routerLink="/AboutUs/OurGoals" [fragment]="'our-goals'">{{ 'NAVBAR.ABOUT_US_ITEMS.AUTHORS' | translate }}</a></li>
+          </ul>
+        </li>
+      </ul>
+    
+      <!-- Social Media and Language Switch -->
+      <div class="d-flex align-items-center mt-2 mt-lg-0" [ngClass]="{
+        'ms-lg-3': language === 'en',
+        'me-lg-3': language === 'ar'
+      }">
+        <div class="social-media d-flex align-items-center me-auto" [ngClass]="{
+          'me-lg-3': language === 'en',
+          'ms-lg-3': language === 'ar'
+        }">
+          <app-theme-switcher></app-theme-switcher>
+        </div>
+    
+        <div>
+          <!-- Display Arabic button if language is English -->
+          <button class="btn btn-outline-custom me-2" *ngIf="language === 'en'" (click)="switchLanguage('ar')">عربي</button>
+          <!-- Display English button if language is Arabic -->
+          <button class="btn btn-outline-custom me-2" *ngIf="language === 'ar'" (click)="switchLanguage('en')">{{ 'NAVBAR.English' | translate }}</button>
+        </div>
+      </div>
+    </div>
+    </div>
+    
+    </nav>

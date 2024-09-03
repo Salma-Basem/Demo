@@ -1,0 +1,174 @@
+<div class="container-fluid bg-main py-5 " [attr.dir]="language === 'ar' ? 'rtl' : 'ltr'">
+
+<div class="container py-3 mt-5 ">
+  <h2 class="text-center text-main fw-bold mb-5  title">{{ 'GHAYA_BOARD_DIRECTORS.BOARD_DIRECTORS' | translate }}</h2>
+
+    <div class="container mx-auto  mt-2">
+        <!-- board directors Section -->
+        
+        <div class="row">
+          <!-- Column 1 -->
+          <div class="col-md-6 col-12 d-flex align-content-center justify-content-center mb-4">
+            <div class="d-flex flex-column align-items-center">
+              <!-- Image -->
+              <div class="circle-image-container mb-3">
+                <img src="./assets/Images/MoradMaher.jpeg" alt="Morad Maher" class="circle-image">
+              </div>
+              <!-- Content -->
+              <div class="text-center">
+                <h2 class="mt-2">{{ 'GHAYA_BOARD_DIRECTORS.CEO.NAME' | translate }}</h2>
+                <h3 class="mt-2 text-secondary lead fw-bold">{{ 'GHAYA_BOARD_DIRECTORS.CEO.MAIN_POINTS.POINT1' | translate }}</h3>
+                <!-- More Content -->
+                <button class="btn bg-transparent text-main toggle-button" (click)="toggleMember1Visibility()" [ngClass]="{'expanded': showMoreMember1}">
+                  {{ showMoreMember1 ? ('READ_LESS' | translate) : ('READ_MORE' | translate) }}
+                  <i [ngClass]="showMoreMember1 ? 'fa-solid fa-chevron-up' : 'fa-solid fa-chevron-down'"></i>
+                </button>
+                <ul class="custom-list" [ngClass]="{'show': showMoreMember1}">
+                  <li class="text-main mb-2 animate-fade-in" [innerHTML]="'GHAYA_BOARD_DIRECTORS.CEO.MAIN_POINTS.POINT2' | translate | newlineToBr"></li>
+                  <li class="text-main mb-2 animate-fade-in" [innerHTML]="'GHAYA_BOARD_DIRECTORS.CEO.MAIN_POINTS.POINT3' | translate | newlineToBr"></li>
+                  <li class="text-main mb-2 animate-fade-in" [innerHTML]="'GHAYA_BOARD_DIRECTORS.CEO.MAIN_POINTS.POINT4' | translate | newlineToBr"></li>
+                  <li class="text-main mb-2 animate-fade-in" [innerHTML]="'GHAYA_BOARD_DIRECTORS.CEO.MAIN_POINTS.POINT5' | translate | newlineToBr"></li>
+                  <li class="text-main mb-2 animate-fade-in" [innerHTML]="'GHAYA_BOARD_DIRECTORS.CEO.MAIN_POINTS.POINT6' | translate | newlineToBr"></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        
+          <!-- Column 2 -->
+          <div class="col-md-6 col-12 d-flex align-content-center justify-content-center mb-4">
+            <div class="d-flex flex-column align-items-center">
+              <!-- Image -->
+              <div class="circle-image-container mb-3">
+                <img src="./assets/Images/Amal.jpg" alt="Amal" class="circle-image">
+              </div>
+              <!-- Content -->
+              <div class="text-center">
+                <h2 class="mt-2">{{ 'GHAYA_BOARD_DIRECTORS.VICE_CEO.NAME' | translate }}</h2>
+                <h3 class="mt-2 text-secondary lead fw-bold">{{ 'GHAYA_BOARD_DIRECTORS.VICE_CEO.MAIN_POINTS.POINT1' | translate }}</h3>
+                <!-- More Content -->
+                <button class="btn bg-transparent text-main toggle-button" (click)="toggleMember2Visibility()" [ngClass]="{'expanded': showMoreMember2}">
+                  {{ showMoreMember2 ? ('READ_LESS' | translate) : ('READ_MORE' | translate) }}
+                  <i [ngClass]="showMoreMember2 ? 'fa-solid fa-chevron-up' : 'fa-solid fa-chevron-down'"></i>
+                </button>
+                <ul class="custom-list" [ngClass]="{'show': showMoreMember2}">
+                  <li class="text-main mb-2 animate-fade-in" [innerHTML]="'GHAYA_BOARD_DIRECTORS.VICE_CEO.MAIN_POINTS.POINT2' | translate | newlineToBr"></li>
+                  <li class="text-main mb-2 animate-fade-in" [innerHTML]="'GHAYA_BOARD_DIRECTORS.VICE_CEO.MAIN_POINTS.POINT3' | translate | newlineToBr"></li>
+                  <li class="text-main mb-2 animate-fade-in" [innerHTML]="'GHAYA_BOARD_DIRECTORS.VICE_CEO.MAIN_POINTS.POINT4' | translate | newlineToBr"></li>
+                  <li class="text-main mb-2 animate-fade-in" [innerHTML]="'GHAYA_BOARD_DIRECTORS.VICE_CEO.MAIN_POINTS.POINT5' | translate | newlineToBr"></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+
+        <div class="row">
+          <!-- Column 1 -->
+          <div class="col-md-6 col-12 d-flex align-content-center justify-content-center mb-4">
+            <div class="d-flex flex-column align-items-center">
+              <!-- Image -->
+              <div class="circle-image-container mb-3">
+                <img src="./assets/Images/Emad.jpg" alt="Emad" class="circle-image">
+              </div>
+              <!-- Content -->
+              <div class="text-center">
+                <h2 class="mt-2">{{ 'GHAYA_BOARD_DIRECTORS.MEMBER1.NAME' | translate }}</h2>
+                <h3 class="mt-2 text-secondary lead fw-bold">{{ 'GHAYA_BOARD_DIRECTORS.MEMBER1.MAIN_POINTS.POINT1' | translate }}</h3>
+                <!-- More Content -->
+                <button class="btn bg-transparent text-main toggle-button" (click)="toggleMember3Visibility()" [ngClass]="{'expanded': showMoreMember3}">
+                  {{ showMoreMember3 ? ('READ_LESS' | translate) : ('READ_MORE' | translate) }}
+                  <i [ngClass]="showMoreMember3 ? 'fa-solid fa-chevron-up' : 'fa-solid fa-chevron-down'"></i>
+                </button>
+                <ul class="custom-list" [ngClass]="{'show': showMoreMember3}">
+                  <li class="text-main mb-2 animate-fade-in" [innerHTML]="'GHAYA_BOARD_DIRECTORS.MEMBER1.MAIN_POINTS.POINT2' | translate | newlineToBr"></li>
+                  <li class="text-main mb-2 animate-fade-in" [innerHTML]="'GHAYA_BOARD_DIRECTORS.MEMBER1.MAIN_POINTS.POINT3' | translate | newlineToBr"></li>
+                  <li class="text-main mb-2 animate-fade-in" [innerHTML]="'GHAYA_BOARD_DIRECTORS.MEMBER1.MAIN_POINTS.POINT4' | translate | newlineToBr"></li>
+                  <li class="text-main mb-2 animate-fade-in" [innerHTML]="'GHAYA_BOARD_DIRECTORS.MEMBER1.MAIN_POINTS.POINT5' | translate | newlineToBr"></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        
+          <!-- Column 2 -->
+          <div class="col-md-6 col-12 d-flex align-content-center justify-content-center mb-4">
+            <div class="d-flex flex-column align-items-center">
+              <!-- Image -->
+              <div class="circle-image-container mb-3">
+                <img src="./assets/Images/Mostafa.jpg" alt="Mostafa" class="circle-image">
+              </div>
+              <!-- Content -->
+              <div class="text-center">
+                <h2 class="mt-2">{{ 'GHAYA_BOARD_DIRECTORS.MEMBER2.NAME' | translate }}</h2>
+                <h3 class="mt-2 text-secondary lead fw-bold">{{ 'GHAYA_BOARD_DIRECTORS.MEMBER2.MAIN_POINTS.POINT1' | translate }}</h3>
+                <!-- More Content -->
+                <button class="btn bg-transparent text-main toggle-button" (click)="toggleMember4Visibility()" [ngClass]="{'expanded': showMoreMember4}">
+                  {{ showMoreMember4 ? ('READ_LESS' | translate) : ('READ_MORE' | translate) }}
+                  <i [ngClass]="showMoreMember4 ? 'fa-solid fa-chevron-up' : 'fa-solid fa-chevron-down'"></i>
+                </button>
+                <ul class="custom-list" [ngClass]="{'show': showMoreMember4}">
+                  <li class="text-main mb-2 animate-fade-in" [innerHTML]="'GHAYA_BOARD_DIRECTORS.MEMBER2.MAIN_POINTS.POINT2' | translate | newlineToBr"></li>
+                  <li class="text-main mb-2 animate-fade-in" [innerHTML]="'GHAYA_BOARD_DIRECTORS.MEMBER2.MAIN_POINTS.POINT3' | translate | newlineToBr"></li>
+                  <li class="text-main mb-2 animate-fade-in" [innerHTML]="'GHAYA_BOARD_DIRECTORS.MEMBER2.MAIN_POINTS.POINT4' | translate | newlineToBr"></li>
+                  <li class="text-main mb-2 animate-fade-in" [innerHTML]="'GHAYA_BOARD_DIRECTORS.MEMBER2.MAIN_POINTS.POINT5' | translate | newlineToBr"></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <!-- Column 1 -->
+          <div class="col-md-6 col-12 d-flex align-content-center justify-content-center mb-4">
+            <div class="d-flex flex-column align-items-center">
+              <!-- Image -->
+              <div class="circle-image-container mb-3">
+                <img src="./assets/Images/Nancy.JPG" alt="nancy" class="circle-image">
+              </div>
+              <!-- Content -->
+              <div class="text-center">
+                <h2 class="mt-2">{{ 'GHAYA_BOARD_DIRECTORS.MEMBER3.NAME' | translate }}</h2>
+                <h3 class="mt-2 text-secondary lead fw-bold">{{ 'GHAYA_BOARD_DIRECTORS.MEMBER3.MAIN_POINTS.POINT1' | translate }}</h3>
+                <!-- More Content -->
+                <button class="btn bg-transparent text-main toggle-button" (click)="toggleMember5Visibility()" [ngClass]="{'expanded': showMoreMember5}">
+                  {{ showMoreMember5 ? ('READ_LESS' | translate) : ('READ_MORE' | translate) }}
+                  <i [ngClass]="showMoreMember5 ? 'fa-solid fa-chevron-up' : 'fa-solid fa-chevron-down'"></i>
+                </button>
+                <ul class="custom-list" [ngClass]="{'show': showMoreMember5}">
+                  <li class="text-main mb-2 animate-fade-in" [innerHTML]="'GHAYA_BOARD_DIRECTORS.MEMBER3.MAIN_POINTS.POINT2' | translate | newlineToBr"></li>
+                  <li class="text-main mb-2 animate-fade-in" [innerHTML]="'GHAYA_BOARD_DIRECTORS.MEMBER3.MAIN_POINTS.POINT3' | translate | newlineToBr"></li>
+                  <li class="text-main mb-2 animate-fade-in" [innerHTML]="'GHAYA_BOARD_DIRECTORS.MEMBER3.MAIN_POINTS.POINT4' | translate | newlineToBr"></li>
+                  <li class="text-main mb-2 animate-fade-in" [innerHTML]="'GHAYA_BOARD_DIRECTORS.MEMBER3.MAIN_POINTS.POINT5' | translate | newlineToBr"></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        
+          <!-- Column 2 -->
+          <div class="col-md-6 col-12 d-flex align-content-center justify-content-center mb-4">
+            <div class="d-flex flex-column align-items-center">
+              <!-- Image -->
+              <div class="circle-image-container mb-3">
+                <img src="./assets/Images/haytham.jpg" alt="Haytham" class="circle-image">
+              </div>
+              <!-- Content -->
+              <div class="text-center">
+                <h2 class="mt-2">{{ 'GHAYA_BOARD_DIRECTORS.MEMBER4.NAME' | translate }}</h2>
+                <h3 class="mt-2 text-secondary lead fw-bold">{{ 'GHAYA_BOARD_DIRECTORS.MEMBER4.MAIN_POINTS.POINT1' | translate }}</h3>
+                <!-- More Content -->
+                <button class="btn bg-transparent text-main toggle-button" (click)="toggleMember6Visibility()" [ngClass]="{'expanded': showMoreMember6}">
+                  {{ showMoreMember6? ('READ_LESS' | translate) : ('READ_MORE' | translate) }}
+                  <i [ngClass]="showMoreMember6 ? 'fa-solid fa-chevron-up' : 'fa-solid fa-chevron-down'"></i>
+                </button>
+                <ul class="custom-list" [ngClass]="{'show': showMoreMember6}">
+                  <li class="text-main mb-2 animate-fade-in" [innerHTML]="'GHAYA_BOARD_DIRECTORS.MEMBER4.MAIN_POINTS.POINT2' | translate | newlineToBr"></li>
+                  <li class="text-main mb-2 animate-fade-in" [innerHTML]="'GHAYA_BOARD_DIRECTORS.MEMBER4.MAIN_POINTS.POINT3' | translate | newlineToBr"></li>
+                  <li class="text-main mb-2 animate-fade-in" [innerHTML]="'GHAYA_BOARD_DIRECTORS.MEMBER4.MAIN_POINTS.POINT4' | translate | newlineToBr"></li>
+                  <li class="text-main mb-2 animate-fade-in" [innerHTML]="'GHAYA_BOARD_DIRECTORS.MEMBER4.MAIN_POINTS.POINT5' | translate | newlineToBr"></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+</div>
+</div>

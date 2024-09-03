@@ -1,0 +1,79 @@
+/* Main Navbar Styles */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    
+   /* background: var(--navbar-bg-transparent); /* Default transparent background */
+    color: var(--text-color-transparent); /* Default text color for transparent background */
+    transition: background 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+    z-index: 1000;
+  }
+  
+  /* Navbar when scrolled */
+  .navbar.scrolled {
+    background: var(--navbar-bg); /* Solid background when scrolled */
+    color: var(--text-color); /* Text color based on theme when scrolled */
+  }
+  .navbar.scrolled .offcanvas-body ul li a,  .navbar.scrolled .offcanvas-body button.translation
+  {
+    color:var(--text-color) !important;
+  }
+  /* Navbar Link Styles */
+  .navbar .nav-link {
+    color: var(--navbar-bg); /* Inherit color from navbar */
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s ease;
+  }
+  
+  /* .navbar .nav-link:hover {
+    color: var(--hover-color);
+  } */
+  
+  /* Offcanvas Menu */
+  .sidebar {
+    background-color: var(--navbar-bg);
+    /*backdrop-filter: blur(10px);*/
+  }
+  
+  /* Dropdown Menu */
+  .dropdown-menu {
+    background-color: var(--dropdown-bg);
+   
+  }
+  .dropdown-menu li
+  {
+    background-color: var(--dropdown-bg);
+  }
+  .dropdown-menu li a 
+  {
+   
+    color:var(--text-color) !important;
+  }
+  
+
+
+  /* Icon Styles */
+.theme-icon {
+    color: var(--icon-color); /* Icon color based on theme */
+  }
+  
+  /* Ensure icon color remains consistent */
+  .navbar .theme-icon {
+    color: var(--icon-color); /* Apply icon color */
+  }
+ 
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .navbar {
+      padding: 0.5rem 1rem;
+    }
+  
+    .nav-links {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+  }

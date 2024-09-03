@@ -1,0 +1,57 @@
+/* Ensure the carousel container and items are centered */
+.carousel-item-container {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Add this to center vertically if needed */
+  }
+  
+  /* Center image in small screens */
+  .image-column {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Center vertically if needed */
+    text-align: center;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 767px) {
+    .carousel-item-container {
+      flex-direction: column; /* Stack image and text vertically */
+    }
+  
+    .image-column {
+      margin-bottom: 20px; /* Space between image and text */
+    }
+  
+    .text-main {
+      text-align: center; /* Center text for small screens */
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .text-main {
+      text-align: start; /* Align text to the start on larger screens */
+    }
+  }
+  
+  /* General RTL settings */
+.rtl {
+    direction: rtl;
+    text-align: right; /* Ensure text aligns correctly in RTL */
+  }
+  
+  /* Specific adjustments for carousel in RTL */
+  .rtl .owl-carousel {
+    direction: rtl;
+  }
+  
+  /* Optional: Adjust carousel controls */
+  .rtl .owl-prev {
+    left: auto;
+    right: 0;
+  }
+  
+  .rtl .owl-next {
+    right: auto;
+    left: 0;
+  }
